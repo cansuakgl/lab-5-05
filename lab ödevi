@@ -1,0 +1,41 @@
+class Main{
+interface Bilgisayar {
+	
+   public void ozellikGoster();
+   
+   class bilgisayarOzellik{
+	   String cihazAdi = "DesktopAsus";
+	   String islemciTipi = "intelCore i7 8th gen";
+	   String RAM = "16 GB";
+	   String cihazKimlik = "12345-6789-10";
+	   String sistemTipi = "64 bit isletim sistemi";
+	   }
+}
+
+static class AnonimClass {
+   public void classOlustur() {
+ 
+	 
+     Bilgisayar yeniBilgisayar = new Bilgisayar() {
+         public void ozellikGoster() {
+        	Bilgisayar.bilgisayarOzellik ozellikler = new Bilgisayar.bilgisayarOzellik();
+        	 System.out.println("cihaz adi : " + ozellikler.cihazAdi);
+        	 System.out.println("islemci tipi : " + ozellikler.islemciTipi);
+        	 System.out.println("RAM : "  + ozellikler.RAM);
+        	 System.out.println("cihaz kimligi : "  + ozellikler.cihazKimlik);
+        	 System.out.println("sistem tipi : " + ozellikler.sistemTipi);
+        	 
+         }
+      };
+      yeniBilgisayar.ozellikGoster();
+   }
+}
+
+
+   public static void main(String[] args) {
+	   
+      AnonimClass anonim = new AnonimClass();
+      anonim.classOlustur();
+   
+}
+}
